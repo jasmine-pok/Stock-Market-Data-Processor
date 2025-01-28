@@ -53,6 +53,11 @@ def fetch_stock_data(symbol, start_date, end_date):
     df['date'] = pd.to_datetime(df.index)
     # rearranges the columns to include only relevant fields 
     df = df[['date', 'open', 'close', 'high', 'low', 'volume']]
+
+    # convert relevant columns to numeric
+    numeric_columns = ['open', 'high', 'low', 'close', 'volume']
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+
     # add the stock symbol as a new column
     df['symbol'] = symbol
 

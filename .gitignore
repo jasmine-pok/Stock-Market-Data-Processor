@@ -1,2 +1,7 @@
 # .env file
 .env
+
+
+# Byte-compiled / optimized / DLL files
+utils/__pycache__/
+*.pyc 
