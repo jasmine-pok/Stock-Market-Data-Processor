@@ -145,7 +145,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
   For any questions or feedback, feel free to contact us at:
-- **Sayra Rodriguez** - *Front-end development* - [sayra6123@gmail.com](mailto:sayra6123@gmail.com)
-- **Socheata (Jasmine) Pok** - *Back-end development* - [socheatapok0801@gmail.com](mailto:socheatapok0801@gmail.com)
+- **Socheata (Jasmine) Pok** - [socheatapok0801@gmail.com](mailto:socheatapok0801@gmail.com)
 
 
