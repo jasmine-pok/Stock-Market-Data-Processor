@@ -5,6 +5,7 @@ import pandas as pd
 
 # Streamlit UI
 st.title("Stock Market Data Processor")
+st.write("Welcome to the Stock Market Data Processor! Enter a stock symbol and date range to fetch and visualize the stock data.")
 symbol = st.text_input("Enter Stock Symbol (e.g., AAPL):", "AAPL")
 start_date = st.date_input("Enter Start Date (YYYY-MM-DD):", pd.to_datetime("2024-09-03"))
 end_date = st.date_input("Enter End Date (YYYY-MM-DD):", pd.to_datetime("2025-01-27"))
