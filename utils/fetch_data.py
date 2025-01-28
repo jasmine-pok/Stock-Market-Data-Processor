@@ -7,11 +7,14 @@ import os
 import sqlite3
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 def fetch_stock_data(symbol, start_date, end_date):
+    """
     # Retrieve API key from .env
     api_key = os.getenv('ALPHA_VANTAGE_API_KEY')
+    """
+    api_key = st.secrets["alpha_vantage"]["api_key"]
     if not api_key:
         raise ValueError('API key not found')
     
