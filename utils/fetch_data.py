@@ -27,15 +27,15 @@ def fetch_stock_data(symbol, start_date, end_date):
     # Make a GET request to the API endpoint
     response = requests.get(url, params=params)
 
-    # Debugging: print raw response
+    """ Debugging: print raw response
     print("Raw API Response:")
     print(response.json())
+    """
 
     if response.status_code != 200:
         raise ValueError(f"Error fetching data: {response.status_code}, {response.text}")
     
     data = response.json()
-    print(f"Data: {data}")
 
     # Transform the data into a Pandas DataFrame
     if 'Time Series (Daily)' not in data or not data['Time Series (Daily)']:
@@ -56,26 +56,29 @@ def fetch_stock_data(symbol, start_date, end_date):
     # add the stock symbol as a new column
     df['symbol'] = symbol
 
-    # Debugging: print raw data
+    """ Debugging: print raw data
     print("Raw Dataframe:")
     print(df.head())
 
-    # Debugging: print the date range in the raw data
+    # Debugging: print the date range in the raw data 
     print(f"Data range in raw data: {df['date'].min()} to {df['date'].max()}")
+    """
 
     # Convert start_date and end_date to datetime (in case they are strings)
     start_date = pd.to_datetime(start_date)
     end_date = pd.to_datetime(end_date)
 
-    # Debugging: Print the date range you're filtering with
+    """Debugging: Print the date range you're filtering with
     print(f"Filtering between {start_date} and {end_date}")
+    """
 
     # Filters the DataFrame to include only the data within the specified date range
     df = df[(df['date'] >= start_date) & (df['date'] <= end_date)]   # Filter the data by date range
     
-    # Debugging: print filtered data
+    """ Debugging: print filtered data
     print("Filtered Dataframe:")
     print(df.head())
+
 
     # Debugging: Check the filtered data range
     if not df.empty:
@@ -84,7 +87,8 @@ def fetch_stock_data(symbol, start_date, end_date):
         print("No data available for the selected date range.")
 
     print(f"Dataframe size after filtering: {df.shape}")
-
+    """
+    
     df = df.sort_values(by='date')
 
     return df
