@@ -68,7 +68,7 @@ Stock-Market-Data-Processor/
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/Stock-Market-Data-Processor.git
+   git clone https://github.com/jasmine-pok/Stock-Market-Data-Processor.git
    cd Stock-Market-Data-Processor
    
 2. Set up a virtual environment (if you don't have one already)
@@ -145,6 +145,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
   For any questions or feedback, feel free to contact us at:
-- **Socheata (Jasmine) Pok** - [socheatapok0801@gmail.com](mailto:socheatapok0801@gmail.com)
+- **Socheata (Jasmine) Pok** - [socheatajpok@gmail.com](mailto:socheatajpok@gmail.com)
 
 
